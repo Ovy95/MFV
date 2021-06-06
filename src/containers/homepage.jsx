@@ -47,25 +47,61 @@ export function HomePage(props) {
     const response = await fetch(url)
     // Storing data in form of JSON 
     var data = await response.json()
-    setRequests(data)
+    let filterdata = data.map(function(element){
+
+      return `${element.language}`
+
+    })
+
+    setRequests(filterdata)
+    console.log(filterdata)
+
     console.log(data)
     console.log(req)
   }
+  
 
- 
+    //req this.response 
+//   var arr1=[2, 'a', 'a', 'a', 2, 2, 'a', 2, 'a', 2, 4, 9, 3];
+
+// var mf = 1;
+// var m = 0;
+// var item;
+// for (var i=0; i<arr1.length; i++)
+// {
+//         for (var j=i; j<arr1.length; j++)
+//         {
+//                 if (arr1[i] == arr1[j])
+//                  m++;
+//                 if (mf<m)
+//                 {
+//                   mf=m; 
+//                   item = arr1[i];
+//                 }
+//         }
+//         m=0;
+// }
+// console.log(item+" ( " +mf +" times ) ")
+
+  function favLang(req) {
+    // req.map(languages => <div key={languages.id}>{</div>)
+  }
+
+
  
     return(
       <PageContainer>
         <form onSubmit = {handleSubmit}>
             <input onChange = {(e) => setName(e.target.value)} value = {name}></input>
-            {/* <input onChange = {(e) => aptRequest(e.target.value)} value = {name}></input> */}
             <button type = 'submit'>Click to submit</button>
         </form>
 
         <h1>Hellow World</h1>
         <div>
-        { req.length ?
-          req.map(post => <div key={post.id}>{post.language} </div>) :null
+
+        { 
+          req
+          //req.map(post => <div key={post.id}>{post.language} </div>) :null
         }
         </div>
         <h2>
