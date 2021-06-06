@@ -26,10 +26,12 @@ export function HomePage(props) {
     const handleSubmit = (e) => {
       // aptRequest(name)
         e.preventDefault();
-      console.log(url)
+      // console.log(url)
       getapi(url)
-        console.log(`${name}`)
+        // console.log(`${name}`)
         console.log(req)
+
+      favLang(req)
     }
 
     // const aptRequest = (name) => {
@@ -48,12 +50,11 @@ export function HomePage(props) {
     // Storing data in form of JSON 
     var data = await response.json()
     let filterdata = data.map(function(element){
-
       return `${element.language}`
-
     })
+    let language=favLang(filterdata)
 
-    setRequests(filterdata)
+    setRequests(language)
     console.log(filterdata)
 
     console.log(data)
@@ -61,30 +62,29 @@ export function HomePage(props) {
   }
   
 
-    //req this.response 
-//   var arr1=[2, 'a', 'a', 'a', 2, 2, 'a', 2, 'a', 2, 4, 9, 3];
 
-// var mf = 1;
-// var m = 0;
-// var item;
-// for (var i=0; i<arr1.length; i++)
-// {
-//         for (var j=i; j<arr1.length; j++)
-//         {
-//                 if (arr1[i] == arr1[j])
-//                  m++;
-//                 if (mf<m)
-//                 {
-//                   mf=m; 
-//                   item = arr1[i];
-//                 }
-//         }
-//         m=0;
-// }
-// console.log(item+" ( " +mf +" times ) ")
+function favLang(arr1) {
 
-  function favLang(req) {
-    // req.map(languages => <div key={languages.id}>{</div>)
+var mf = 1;
+var m = 0;
+var item;
+for (var i=0; i<arr1.length; i++)
+{
+        for (var j=i; j<arr1.length; j++)
+        {
+                if (arr1[i] == arr1[j])
+                 m++;
+                if (mf<m)
+                {
+                  mf=m; 
+                  item = arr1[i];
+                }
+        }
+        m=0;
+}
+console.log(item+" ( " +mf +" times ) ")
+setRequests([item])
+return item
   }
 
 
