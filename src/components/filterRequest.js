@@ -23,12 +23,12 @@
 
 
   export function filterDataByLanguages(data){
-
-    return data.map(function(element){
-       return `${element.language}`
+    let langarray = []
+    data.map(function(element){
+      if(`${element.language}`!= 'null')
+       langarray.push(`${element.language}`)
       }
-
-
     )
-    console.log(data)
+    return langarray
+
   }

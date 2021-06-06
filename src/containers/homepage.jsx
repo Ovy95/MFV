@@ -31,6 +31,7 @@ export function HomePage(props) {
     // Storing data in form of JSON 
     var data = await response.json()
     let filterdata = filterDataByLanguages(data)
+    console.log(filterdata)
     let language = filterToFavouriteLanguage(filterdata)
     setRequests(language)
   }
