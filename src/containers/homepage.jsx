@@ -16,20 +16,24 @@ text-align: center;
 
 export function HomePage(props) {
   
-
+  const [req, setRequests] = useState([])
             // This allows for seeting name 
     const [name, setName] = useState('');
 
+
     const handleSubmit = (e) => {
-    
         e.preventDefault();
-        console.log(`Form submitted, ${name}`);  
-        axios.get('https://api.github.com/users/'+`${name}`+'/repos')
+        aptRequest(name)
+        // console.log(`${name}`)
+        // console.log(req)
+    }
+
+    const aptRequest = (name) => {
+      axios.get('https://api.github.com/users/'+name+'/repos')
         .then(response =>{
           console.log(response)
+          setRequests(response)
         })
-        console.log(`${name}`)
-
     }
 
     return(
@@ -40,6 +44,9 @@ export function HomePage(props) {
         </form>
 
         <h1>Hellow World</h1>
+        {/* {
+            req.map( p => <div key={req}></div>)
+        } */}
 
 
       </PageContainer>
