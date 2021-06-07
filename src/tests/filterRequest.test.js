@@ -22,3 +22,11 @@ describe('filterDataByLanguages Function: Filters the data checks for `null` val
     expect(sortedData.length).toBe(6)
   })
 })
+
+describe('filterToFavouriteLanguage Function: takes two values name and new sorted Array returns most common factor in the array value plus the name', () => {
+  it('Returns the data filtered out from null values', () => {
+    let sortedData = filterDataByLanguages(mockJsonData)
+    expect(filterToFavouriteLanguage(sortedData,"Jack")).toStrictEqual(["Jack's favourite is JavaScript",])
+  })
+  
+})
