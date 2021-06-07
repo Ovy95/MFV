@@ -1,5 +1,5 @@
 
-  export function filterToFavouriteLanguage(arr1){
+  export function filterToFavouriteLanguage(arr1,name){
       var mf = 1;
       var m = 0;
       var item;
@@ -18,7 +18,7 @@
               m=0;
       }
       console.log(item+" ( " +mf +" times ) ")
-      return [item]
+      return [name+"'s favourite is "+item]
   }
 
 
@@ -34,13 +34,13 @@
 
   }
 
-  export function FavouriteLanguage(data){
+  export function FavouriteLanguage(data,name){
 
     if (noRepos(data) === true){
       return ["User has no Repos"]
     }
     let filterdata = filterDataByLanguages(data)
-    return filterToFavouriteLanguage(filterdata)
+    return filterToFavouriteLanguage(filterdata,name)
   }
 
   function noRepos(data){
