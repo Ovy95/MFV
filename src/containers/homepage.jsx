@@ -3,35 +3,7 @@ import styled from "styled-components";
 import {FavouriteLanguage} from "../components/filterRequest"
 import { FaGithub} from "react-icons/fa";
 import {Marginer} from "../components/marginer"
-const PageContainer = styled.div`
-width: 100%;
-height: 100vh;
-background-color: #0d1117;
-display: block;
-`
-const LogoContainer = styled.div`
-padding: 30px;
-justify-content: center;
-align-items: center;
-font-size: 58px;
-display: flex;
-color:  white;
-`
-  const FormWrapper = styled.div`
-  padding: 20px;
-  justify-content: center;
-  display: flex;
-  `
-const FormContainer = styled.div`
-width: 27%;
-border-radius: 10px;
-background-color: #161c22;
-padding: 20px;
-border: 1px solid #21262d;
-display: flex;
-flex-direction: column;
-align-items: center;
-`;
+
 
 export function HomePage(props) {
 
@@ -85,4 +57,32 @@ export function HomePage(props) {
 }
 
 
-  
+  const PageContainer = styled.div`
+width: 100%;
+height: 100vh;
+background-color: #0d1117;
+display: block;
+`
+const LogoContainer = styled.div`
+padding: 30px;
+justify-content: center;
+align-items: center;
+font-size: 58px;
+display: flex;
+color:  white;
+`
+  const FormWrapper = styled.div`
+  padding: 20px;
+  justify-content: center;
+  display: flex;
+  `
+const FormContainer = styled.div`
+width: 27%;
+border-radius: 10px;
+background-color: #161c22;
+padding: 20px;
+border: 1px solid #21262d;
+display: flex;
+flex-direction: column;
+align-items: center;
+`;

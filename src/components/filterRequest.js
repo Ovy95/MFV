@@ -1,4 +1,5 @@
 
+
   export function filterToFavouriteLanguage(arr1,name){
       var mf = 1;
       var m = 0;
@@ -43,8 +44,9 @@
     return filterToFavouriteLanguage(filterdata,name)
   }
 
-  function noRepos(data){
+  export function noRepos(data){
     return Object.keys(data).length === 0;
   }
+
 
 
