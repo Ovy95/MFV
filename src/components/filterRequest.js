@@ -24,11 +24,27 @@
 
   export function filterDataByLanguages(data){
     let langarray = []
+    // let langarray = []
     data.map(function(element){
       if(`${element.language}`!= 'null')
        langarray.push(`${element.language}`)
-      }
-    )
+       }
+      )
     return langarray
 
   }
+
+  export function FavouriteLanguage(data){
+
+    if (noRepos(data) === true){
+      return ["User has no Repos"]
+    }
+    let filterdata = filterDataByLanguages(data)
+    return filterToFavouriteLanguage(filterdata)
+  }
+
+  function noRepos(data){
+    return Object.keys(data).length === 0;
+  }
+
+
