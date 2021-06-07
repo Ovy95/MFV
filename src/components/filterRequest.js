@@ -25,7 +25,6 @@
 
   export function filterDataByLanguages(data){
     let langarray = []
-    // let langarray = []
     data.map(function(element){
       if(`${element.language}`!= 'null')
        langarray.push(`${element.language}`)
