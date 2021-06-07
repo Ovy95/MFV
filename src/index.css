@@ -61,10 +61,14 @@ input{
   color: #fff;
   background-color: #238636;
   border-color: #2ea043;
-  box-shadow: var(--color-btn-primary-shadow),var(--color-btn-primary-inset-shadow);
+
+  box-shadow: 0 0 transparent,0 0 transparent;;
   font-size: 16px;
   width: 108.7%;
-
+}
+.btn-primary:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

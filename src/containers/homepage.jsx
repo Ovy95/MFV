@@ -7,15 +7,10 @@ const PageContainer = styled.div`
 width: 100%;
 height: 100vh;
 background-color: #0d1117;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
 display: block;
 `
 const LogoContainer = styled.div`
-padding: 30px;s
-text-align: top;
+padding: 30px;
 justify-content: center;
 align-items: center;
 font-size: 58px;
@@ -23,24 +18,19 @@ display: flex;
 color:  white;
 `
   const FormWrapper = styled.div`
-  padding: 30px;
-  border: 1px solid #white;
-  text-align: top;
-  background-color: #0d1117;
+  padding: 20px;
   justify-content: center;
-  align-items: center;
   display: flex;
   `
 const FormContainer = styled.div`
-width: 25%;
+width: 27%;
+border-radius: 10px;
 background-color: #161c22;
 padding: 20px;
 border: 1px solid #21262d;
-border-radius: 10px;
 display: flex;
 flex-direction: column;
 align-items: center;
-text-align: center;
 `;
 
 export function HomePage(props) {
@@ -81,7 +71,7 @@ export function HomePage(props) {
             <input onChange = {(e) => setName(e.target.value)} value = {name}></input>
             <Marginer direction="vertical" margin="1.5em" />
 
-            <button class="btn-primary" type = 'submit' > <FaGithub margin-top = "2rem" /> Submit</button>
+            <button class="btn-primary" type = 'submit' >Submit</button>
         </form>
         <Marginer direction="vertical" margin="1em" />
       
