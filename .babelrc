@@ -1,4 +1,4 @@
 {
-  "plugins": ["macros"],
+  "plugins": ["macros","react-html-attrs"],
   "presets": ["@babel/react", "@babel/env"]
 }
