@@ -13,12 +13,12 @@ You may use any programming language, framework, or library.
 I whiteboarded all the processes/things to be thinking about. See image in whiteboard folder.
 
 This included 
-- Getting user input for Api Address
-- What the data Oject looks like, I used postman for this  
-- Filter Methods on requests
-- Design
-- Testing
-- EdgeCases
+- [x] Getting user input for Api Address
+- [x] What the data Oject looks like, I used postman for this  
+- [x] Filter Methods on requests
+- [x] Design
+- [x] Testing
+- [x] EdgeCases
 
 # User Stories
 
@@ -35,10 +35,10 @@ I'd like to click a button which returns the selected users favourite programmin
 ```
 
 # Edge Cases 
-- Github User has no Repos
-- Github User has a join favourite language
-- Github user has undetermined language of choice (null)
-- User inputs invalid Github Username
+- [x] Github User has no Repos
+- [x] Github User has a join favourite language
+- [x] Github user has undetermined language of choice (null)
+- [x] User inputs invalid Github Username
 
 
 # Improvements/Future Features
