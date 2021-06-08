@@ -83,3 +83,9 @@ I decided to take inspiration from the Github Login in page(darkmode) as if was 
 
 3. Once loaded, type in an arbitrary Github user in the input box and click submit when you're ready.
 
+# Running Tests after Setup is complete
+1. Open up a terminal in your text editor and type "npm test".
+2. This will automatically start run the tests which will look the image below
+
+![Screenshot 2021-06-08 at 12 15 47](https://user-images.githubusercontent.com/57540755/121178351-51cc0580-c856-11eb-9b48-df0e216a926d.png)
+
