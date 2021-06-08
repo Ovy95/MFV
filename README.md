@@ -14,12 +14,12 @@ You may use any programming language, framework, or library.
 - HTML/CSS
 - Jest
 
+
 # Process/Whiteboarding
 
-I whiteboarded all the processes/things to be thinking about. See image in whiteboard folder.
+I whiteboarded all the processes/things to be thinking about for this task. Check the image below for this
 
-![IMG_9469](https://user-images.githubusercontent.com/57540755/121174977-70300200-c852-11eb-8123-f3d8c0bcce86.jpeg)
-
+<img width="1398" alt="Screenshot 2021-06-08 at 12 13 51" src="https://user-images.githubusercontent.com/57540755/121175506-06642800-c853-11eb-8536-7d87aebbe59c.png">
 
 This included 
 - [x] Getting user input for Api Address
