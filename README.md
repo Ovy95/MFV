@@ -47,6 +47,7 @@ I'd like to click a button which returns the selected users favourite programmin
 - [x] User inputs invalid Github Username
 
 
+
 # Improvements/Future Features
 - Github Avatar
 - Mocking of Api
@@ -63,7 +64,7 @@ I decided to take inspiration from the Github Login in page(darkmode) as if was 
 
 2. type git clone "https://github.com/Ovy95/MFV.git" in the terminal
 
-3. cd into 'Favourite-Programming-Language' (Change directory's)
+3. cd into 'MFV' (Change directory's)
 
 4. Install node.js and run npm install in command line to install dependencies
 
