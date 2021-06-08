@@ -1,6 +1,6 @@
 import React from 'react';
 import '@testing-library/jest-dom'
-import { getAllByPlaceholderText, getByDisplayValue, render,screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import {HomePage} from '../containers/homepage'
 
 describe('Testing the starter App with enzyme and jest', () => {
@@ -20,16 +20,6 @@ test('Test for SubmitButton text', () => {
   const linkElement = getByText(/Submit/i);
   expect(linkElement).toBeInTheDocument();
 }); 
-
-// test('Test for starting State text', () => {
-//   const { getSelection } = render(<HomePage />);
-//   const linkElement = getSelection(/.../);
-//   expect(linkElement).toBeInTheDocument();
-// }); 
-
-
-
-
 
 
 })

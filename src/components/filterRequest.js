@@ -1,38 +1,29 @@
+ export function mostCommonLanguage(dataArray,name){
 
-
-  export function filterToFavouriteLanguage(arr1,name){
-      var mf = 1;
-      var m = 0;
-      var item;
-      for (var i=0; i<arr1.length; i++)
-      {
-              for (var j=i; j<arr1.length; j++)
-              {
-                      if (arr1[i] === arr1[j])
-                       m++;
-                      if (mf<m)
-                      {
-                        mf=m; 
-                        item = arr1[i];
-                      }
-              }
-              m=0;
-      }
-      console.log(item+" ( " +mf +" times ) ")
-      return [name+"'s favourite is "+item]
+    let counts = dataArray.reduce((value, count) => {
+      value[count] = (value[count] || 0) + 1;
+      return value;
+    }, {});
+    let maxCount = Math.max(...Object.values(counts));
+    let mostFrequent = Object.keys(counts).filter(k => counts[k] === maxCount);
+    
+    if (mostFrequent.length>1){
+      return [name+" has join favourite language's "+mostFrequent.sort().join(', ')]
+    }
+    return [name+"'s favourite is "+mostFrequent]
   }
 
 
   export function filterDataByLanguages(data){
     let langarray = []
     data.map(function(element){
-      if(`${element.language}`!= 'null')
+      if(`${element.language}`!== 'null')
        langarray.push(`${element.language}`)
        }
       )
 
-     if (langarray.length == 0){
-       return ["Couldn't determine favourite language as they're equal to null"]
+     if (langarray.length === 0){
+       return ["Couldn't determine user's favourite language"]
      }
      else {
     return langarray
@@ -45,7 +36,7 @@
       return [name+ " has no repositories to check against"]
     }
     let filterdata = filterDataByLanguages(data)
-    return filterToFavouriteLanguage(filterdata,name)
+    return mostCommonLanguage(filterdata,name)
   }
 
   export function noRepos(data){

@@ -1,4 +1,4 @@
-import {filterDataByLanguages,FavouriteLanguage,noRepos,filterToFavouriteLanguage} from "../components/filterRequest"
+import {filterDataByLanguages,FavouriteLanguage,noRepos,mostCommonLanguage} from "../components/filterRequest"
 import mockJsonData from './mockdataJson'
 
 describe('noRepos Function: Returns boolean values checking if data passed is empty', () => {
@@ -21,13 +21,24 @@ describe('filterDataByLanguages Function: Filters the data checks for `null` val
     let sortedData = filterDataByLanguages(mockJsonData)
     expect(sortedData.length).toBe(6)
   })
+
+  it('Couldnt determine users favourite language', () => {
+    expect(filterDataByLanguages([])).toStrictEqual(["Couldn't determine user's favourite language"])
+  })
 })
 
-describe('filterToFavouriteLanguage Function: takes two values name and new sorted Array returns most common factor in the array value plus the name', () => {
+describe('mostCommonLanguage Function: takes two values name and new sorted Array returns most common factor in the array value plus the name', () => {
   it('Returns the correct value ready to be value printed out to the main page', () => {
     let sortedData = filterDataByLanguages(mockJsonData)
-    expect(filterToFavouriteLanguage(sortedData,"Jack")).toStrictEqual(["Jack's favourite is JavaScript"])
+    expect(mostCommonLanguage(sortedData,"Jack")).toStrictEqual(["Jack's favourite is JavaScript"])
   })
+
+  it('EdgeCase test for join top languages', () => {
+   let dataArray = ["Ruby","JavaScript",]
+    expect(mostCommonLanguage(dataArray,"Jack")).toStrictEqual(["Jack has join favourite language's JavaScript, Ruby"])
+  })
+
+
   
 })
 
