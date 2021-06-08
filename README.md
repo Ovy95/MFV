@@ -15,6 +15,10 @@ You may use any programming language, framework, or library.
 - Jest
 
 
+https://user-images.githubusercontent.com/57540755/121176751-7f17b400-c854-11eb-9834-64e008507b02.mov
+
+
+
 # Process/Whiteboarding
 
 I whiteboarded all the processes/things to be thinking about for this task. Check the image below for this
