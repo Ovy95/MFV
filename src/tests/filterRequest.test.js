@@ -24,9 +24,24 @@ describe('filterDataByLanguages Function: Filters the data checks for `null` val
 })
 
 describe('filterToFavouriteLanguage Function: takes two values name and new sorted Array returns most common factor in the array value plus the name', () => {
-  it('Returns the data filtered out from null values', () => {
+  it('Returns the correct value ready to be value printed out to the main page', () => {
     let sortedData = filterDataByLanguages(mockJsonData)
-    expect(filterToFavouriteLanguage(sortedData,"Jack")).toStrictEqual(["Jack's favourite is JavaScript",])
+    expect(filterToFavouriteLanguage(sortedData,"Jack")).toStrictEqual(["Jack's favourite is JavaScript"])
   })
   
 })
+
+describe('FavouriteLanguage Function: Used to run on the main page this takes the data and the Username, which is then filtered using the other methods ready to return the correct result back to user ', () => {
+  it('Returns the correct value ready to be value printed out to the main page', () => {
+    expect(FavouriteLanguage(mockJsonData,"Jack")).toStrictEqual(["Jack's favourite is JavaScript"])
+  })
+
+  it('Checks data first and returns No repositories when calling Api', () => {
+    expect(FavouriteLanguage({},"Jack")).toStrictEqual(["Jack has no repositories to check against"])
+  })
+  
+})
+
+
+
+

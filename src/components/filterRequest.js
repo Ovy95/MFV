@@ -8,7 +8,7 @@
       {
               for (var j=i; j<arr1.length; j++)
               {
-                      if (arr1[i] == arr1[j])
+                      if (arr1[i] === arr1[j])
                        m++;
                       if (mf<m)
                       {
@@ -30,14 +30,19 @@
        langarray.push(`${element.language}`)
        }
       )
-    return langarray
 
+     if (langarray.length == 0){
+       return ["Couldn't determine favourite language as they're equal to null"]
+     }
+     else {
+    return langarray
+    }
   }
 
   export function FavouriteLanguage(data,name){
 
     if (noRepos(data) === true){
-      return ["User has no Repos"]
+      return [name+ " has no repositories to check against"]
     }
     let filterdata = filterDataByLanguages(data)
     return filterToFavouriteLanguage(filterdata,name)
