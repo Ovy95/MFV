@@ -18,6 +18,9 @@ You may use any programming language, framework, or library.
 
 I whiteboarded all the processes/things to be thinking about. See image in whiteboard folder.
 
+![IMG_9469](https://user-images.githubusercontent.com/57540755/121174977-70300200-c852-11eb-8123-f3d8c0bcce86.jpeg)
+
+
 This included 
 - [x] Getting user input for Api Address
 - [x] What the data Oject looks like, I used postman for this  
