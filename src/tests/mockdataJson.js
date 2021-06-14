@@ -1,24 +1,24 @@
-export default 
+export default
 
-[ {
-  "language": null
+[{
+  language: null,
 },
 {
-  "language": "Ruby"
+  language: 'Ruby',
 },
 {
-  "language": "GoLang"
+  language: 'GoLang',
 },
 {
-  "language": "JavaScript"
+  language: 'JavaScript',
 },
 {
-  "language": "JavaScript"
+  language: 'JavaScript',
 },
 {
-  "language": "JavaScript"
+  language: 'JavaScript',
 },
 {
-  "language": "Ruby"
-}
-]
+  language: 'Ruby',
+},
+];

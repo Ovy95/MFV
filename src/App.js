@@ -1,11 +1,10 @@
-import React from "react";
+/* eslint-disable no-unused-vars */
+import React from 'react';
 import { HomePage } from './containers/homepage';
-
 
 function App(props) {
   return (
-
-  <HomePage></HomePage>)
-  
+    <HomePage />
+  );
 }
 export default App;
